@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<p>{{ name }}</p>
-    <p>{{ surn }}</p>
+		<h1>
+      Перейдите по ссылке <a :href="href"> {{ text }}</a>
+    </h1>
 	</div>
 </template>
 
@@ -9,8 +10,8 @@
 	export default {
 	data() {
 		return {
-			name: 'john',
-		  surn: 'smit',
+		  text: 'page',
+		  href: 'page.html',
 		}
 	}
 }
