@@ -1,18 +1,23 @@
 <template>
 	<div>
-		<h1>Hello World</h1>
+		<p>{{ name }}</p>
+    <p>{{ surn }}</p>
 	</div>
 </template>
 
 <script>
 	export default {
-    name: 'App',
-
-  }
+	data() {
+		return {
+			name: 'john',
+		  surn: 'smit',
+		}
+	}
+}
 </script>
 
 <style> 
-  h1{
+  p{
     color:red;
   }
 </style>
