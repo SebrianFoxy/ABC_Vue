@@ -1,7 +1,11 @@
 <template>
 	<div>
 		<h1>
-      {{ show() }}
+      <button @mouseover="show">text</button>
+    </h1>
+
+    <h1>
+      <button @click="show">text</button>
     </h1>
 	</div>
 </template>
