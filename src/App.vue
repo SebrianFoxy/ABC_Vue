@@ -1,25 +1,24 @@
 <template>
 	<div>
-		<h1>
-      <button @mouseover="show">text</button>
-    </h1>
-
     <h1>
-      <button @click="show">text</button>
+      <button @click="show">click</button>
     </h1>
 	</div>
 </template>
 
 <script>
 	export default {
-	data() {
-		
-	},
-	methods: {
-		show: function(){
-      alert('09.02.2022');
-    }
+    data() {
+	    return {
+		    num1: 1,
+		    num2: 2,
 	}
+},
+  methods: {
+	  show: function() {
+		  alert(this.num1+this.num2);
+	}
+}
 }
 </script>
 
