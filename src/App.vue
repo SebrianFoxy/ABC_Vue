@@ -1,10 +1,16 @@
 <template>
 	<div>
 		<h1>
-      {{ num*num }}
+      {{ arr[0] }}
     </h1>
     <h1>
-      {{ num1+num2+num3 }}
+      {{ arr[1] }}
+    </h1>
+    <h1>
+      {{ arr[2] }}
+    </h1>
+    <h1>
+      {{ arr1[0]+arr1[1]+arr1[2] }}
     </h1>
 	</div>
 </template>
@@ -13,10 +19,8 @@
 	export default {
 	data() {
 		return {
-		  num: 5,
-      num1: 1,
-		  num2: 2,
-		  num3: 3,
+		  arr: ['x', 'y', 'z'],
+      arr1: [1, 2, 3],
 		}
 	}
 }
