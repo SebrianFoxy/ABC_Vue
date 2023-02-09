@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>
-      {{ obj.x + obj.y + obj.z}}
+      {{ show() }}
     </h1>
 	</div>
 </template>
@@ -9,9 +9,12 @@
 <script>
 	export default {
 	data() {
-		return {
-		  obj: {x: 1, y: 2, z: 3},
-		}
+		
+	},
+	methods: {
+		show: function(){
+      alert('09.02.2022');
+    }
 	}
 }
 </script>
