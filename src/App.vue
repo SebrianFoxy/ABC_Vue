@@ -1,16 +1,7 @@
 <template>
 	<div>
 		<h1>
-      {{ arr[0] }}
-    </h1>
-    <h1>
-      {{ arr[1] }}
-    </h1>
-    <h1>
-      {{ arr[2] }}
-    </h1>
-    <h1>
-      {{ arr1[0]+arr1[1]+arr1[2] }}
+      {{ obj.x + obj.y + obj.z}}
     </h1>
 	</div>
 </template>
@@ -19,8 +10,7 @@
 	export default {
 	data() {
 		return {
-		  arr: ['x', 'y', 'z'],
-      arr1: [1, 2, 3],
+		  obj: {x: 1, y: 2, z: 3},
 		}
 	}
 }
