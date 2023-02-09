@@ -1,7 +1,10 @@
 <template>
 	<div>
 		<h1>
-      Перейдите по ссылке <a :href="href"> {{ text }}</a>
+      {{ num*num }}
+    </h1>
+    <h1>
+      {{ num1+num2+num3 }}
     </h1>
 	</div>
 </template>
@@ -10,8 +13,10 @@
 	export default {
 	data() {
 		return {
-		  text: 'page',
-		  href: 'page.html',
+		  num: 5,
+      num1: 1,
+		  num2: 2,
+		  num3: 3,
 		}
 	}
 }
@@ -22,3 +27,4 @@
     color:red;
   }
 </style>
+
