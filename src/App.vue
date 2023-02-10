@@ -1,30 +1,29 @@
 <template>
 	<div>
     <h1>
-	    <button @click="show">btn1</button>
-	    <button @click="cape">btn2</button>
+	    {{text}}
+      <button @click="change">btn1</button>
+      <button @click="change1">btn2</button>
     </h1>
 	</div>
 </template>
 
 <script>
-	export default {
-    data() {
-	    return {
-        
-	}
-},
-  methods: {
-	show: function() {
-		let number = prompt('Введите число');
-    alert(number*number)
-	},
-	cape: function() {
-		let number = prompt('Введите число');
-    alert(number*number*number)
+  export default{
+    data(){
+      return{
+        text:"xxx",
+      }
+    },
+    methods: {
+      change: function(){
+        this.text="yyy"
+      },
+      change1: function(){
+        this.text="zzz"
+      }
+    }
   }
-  }
-}
 </script>
 
 <style> 
