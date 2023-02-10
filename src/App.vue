@@ -1,9 +1,12 @@
 <template>
 	<div>
     <h1>
-	    <p v-if="hidden">Первый абзац {{click}}</p>
-      <p v-if="!hidden">Второй абзац</p>
-      <button @click="reversing">Reverse</button>
+	    <p v-if="hidden1">Первый абзац</p>
+      <p v-if="hidden2">Второй абзац</p>
+      <p v-if="hidden3">Третий абзац</p>
+      <button @click="reversing1">Абзац1</button>
+      <button @click="reversing2">Абзац2</button>
+      <button @click="reversing3">Абзац3</button>
     </h1>
 	</div>
 </template>
@@ -12,18 +15,20 @@
   export default{
     data(){
       return{
-        click: 1500,
-        hidden: true,
+        hidden1: true,
+        hidden2: true,
+        hidden3: true,
       }
     },
     methods: {
-      reversing: function(){
-        if (this.hidden == true){
-          this.hidden = false;
-        }
-        else if (this.hidden == false){
-          this.hidden = true;
-        }
+      reversing1: function(){
+        this.hidden1 = !this.hidden1;
+      },
+      reversing2: function(){
+        this.hidden2 = !this.hidden2;
+      },
+      reversing3: function(){
+        this.hidden3 = !this.hidden3;
       }
     },
     computed:{
