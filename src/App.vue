@@ -1,9 +1,8 @@
 <template>
 	<div>
     <h1>
-	    <p><a href="/" onclick="return false">Нажми здесь</a></p>
-      <button @click="clicks">click!</button>
-      <p>Kol-vo clicks: {{click}}</p>
+	    <p v-if="visible1">{{click}}</p>
+      <p v-if="visible2">{{click}}</p>
     </h1>
 	</div>
 </template>
@@ -12,7 +11,9 @@
   export default{
     data(){
       return{
-        click: 0,
+        click: 1500,
+        visible1: true,
+        visible2: false,
       }
     },
     methods: {
