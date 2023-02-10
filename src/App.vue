@@ -4,9 +4,9 @@
 	    <p v-if="hidden1">Первый абзац</p>
       <p v-if="hidden2">Второй абзац</p>
       <p v-if="hidden3">Третий абзац</p>
-      <button @click="reversing1">Абзац1</button>
-      <button @click="reversing2">Абзац2</button>
-      <button @click="reversing3">Абзац3</button>
+      <button @click="reversing1">{{hidden1 ? 'hide': 'show'}}</button>
+      <button @click="reversing2">{{hidden2 ? 'hide': 'show'}}</button>
+      <button @click="reversing3">{{hidden3 ? 'hide': 'show'}}</button>
     </h1>
 	</div>
 </template>
