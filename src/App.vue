@@ -1,8 +1,8 @@
 <template>
 	<div>
     <h1>
-      <button @click="show">click</button>
-      <button @click="cape">Click!!!!!!!!</button>
+	    <button @click="show">btn1</button>
+	    <button @click="cape">btn2</button>
     </h1>
 	</div>
 </template>
@@ -11,41 +11,19 @@
 	export default {
     data() {
 	    return {
-		    text: "",
+        
 	}
 },
   methods: {
 	show: function() {
-		let text = this.cape(this.text);
+		let number = prompt('Введите число');
+    alert(number*number)
 	},
-	cape: function(str) {
-		let day = prompt('Введите число от 1 до 7');
-    if (day == 1) {
-    alert('Понедельник');
-    } 
-    else if (day == 2) {
-    alert('Вторнк');
-    } 
-    else if (day == 3) {
-    alert('Среда');
-    } 
-    else if (day == 4) {
-    alert('Четверг');
-    } 
-    else if (day == 5) {
-    alert('Пятница');
-    } 
-    else if (day == 6) {
-    alert('Суббота');
-    } 
-    else if (day == 7) {
-    alert('Воскресенье');
-    }
-    else{
-      alert('Ошибка!')
-    }
-	}
-}
+	cape: function() {
+		let number = prompt('Введите число');
+    alert(number*number*number)
+  }
+  }
 }
 </script>
 
