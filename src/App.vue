@@ -1,7 +1,7 @@
 <template>
 	<div>
     <h1>
-	    <div v-if="isAuth">
+	    <div v-show="isAuth">
 		    <p>+++</p>
 		    <p>+++</p>
 		    <p>+++</p>
