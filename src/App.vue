@@ -1,7 +1,9 @@
 <template>
 	<div>
     <h1>
-	    <p v-if="!hidden">text</p>
+	    <p v-if="hidden">Первый абзац {{click}}</p>
+      <p v-if="!hidden">Второй абзац</p>
+      <button @click="reversing">Reverse</button>
     </h1>
 	</div>
 </template>
@@ -11,16 +13,16 @@
     data(){
       return{
         click: 1500,
-        hidden: false,
+        hidden: true,
       }
     },
     methods: {
-      clicks: function(){
-        if (this.click == 0){
-          return this.click++;
+      reversing: function(){
+        if (this.hidden == true){
+          this.hidden = false;
         }
-        else{
-          alert('Кликнуть можно только 1 раз')
+        else if (this.hidden == false){
+          this.hidden = true;
         }
       }
     },
