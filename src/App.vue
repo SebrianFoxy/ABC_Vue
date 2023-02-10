@@ -1,10 +1,14 @@
 <template>
 	<div>
     <h1>
-	    <p v-if = "age < 18">Подросток</p>
-      <p v-else-if = "age >= 18 && age <= 25">Молодой человек</p>
-      <p v-else-if = "age >= 26">Мужчина</p>
-      <p v-else>Error</p>
+	    <div v-if="isAuth">
+		    <p>+++</p>
+		    <p>+++</p>
+		    <p>+++</p>
+	    </div>
+      <button @click="but">
+        {{isAuth ? 'hide' : 'show'}}
+      </button>
     </h1>
 	</div>
 </template>
@@ -13,11 +17,13 @@
   export default{
     data(){
       return{
-        age: 21,
+        isAuth: true,
       }
     },
     methods: {
-      
+      but: function(){
+        this.isAuth = !this.isAuth
+      }
     },
     computed:{
       
