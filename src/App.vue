@@ -1,8 +1,7 @@
 <template>
 	<div>
     <h1>
-	    <p v-if="visible1">{{click}}</p>
-      <p v-if="visible2">{{click}}</p>
+	    <p v-if="!hidden">text</p>
     </h1>
 	</div>
 </template>
@@ -12,8 +11,7 @@
     data(){
       return{
         click: 1500,
-        visible1: true,
-        visible2: false,
+        hidden: false,
       }
     },
     methods: {
