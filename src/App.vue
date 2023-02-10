@@ -1,14 +1,16 @@
 <template>
 	<div>
     <h1>
-	    <div v-show="isAuth">
-		    <p>+++</p>
-		    <p>+++</p>
-		    <p>+++</p>
+	    <div v-for="elem in items">
+		    <p>{{elem}}</p>
 	    </div>
-      <button @click="but">
-        {{isAuth ? 'hide' : 'show'}}
-      </button>
+      <p>Квадрат чисел</p>
+      <div v-for="elem in items">
+        <p>{{elem*elem}}</p>
+      </div>
+      <div v-for="elem in items">
+        <ul>{{elem*elem}}</ul>
+      </div>
     </h1>
 	</div>
 </template>
@@ -17,13 +19,11 @@
   export default{
     data(){
       return{
-        isAuth: true,
+        items: [1, 2, 3, 4, 5],
       }
     },
     methods: {
-      but: function(){
-        this.isAuth = !this.isAuth
-      }
+      
     },
     computed:{
       
