@@ -1,9 +1,9 @@
 <template>
 	<div>
     <h1>
-	    {{text}}
-      <button @click="change">btn1</button>
-      <button @click="change1">btn2</button>
+	    <p>Количество продукта: {{amount}} | Цена {{cost}}$</p>
+      <p>Всего будет стоить: {{amount*cost}}$</p>
+      <button @click="change">click</button>
     </h1>
 	</div>
 </template>
@@ -12,15 +12,19 @@
   export default{
     data(){
       return{
-        text:"xxx",
+        cost: 15,
+        amount: 10,
       }
     },
     methods: {
       change: function(){
-        this.text="yyy"
-      },
-      change1: function(){
-        this.text="zzz"
+        let newcost = prompt("Введите новую цену");
+        this.cost = newcost
+      }
+    },
+    computed:{
+      full: function(){
+        return this.cost + ' ' + this.amount
       }
     }
   }
