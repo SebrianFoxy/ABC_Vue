@@ -1,24 +1,26 @@
 <template>
 	<div>
-	  <input v-model="num1">
-    <input v-model="num2">
-	  <button v-on:click="calc">work</button>
-    <p>{{ res }}</p>
-	</div>
+	  <textarea v-model="text"></textarea>
+    <button @click='calc'>click!</button>
+    <ul>
+      <li v-for="word in words" :key="word">
+        {{ word }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
   export default{
     data(){
       return{
-        num1: 0,
-        num2: 0,
-		    res: 0,
+        text: '',
+        words: [],
       }
     },
     methods: {
       calc: function() {
-		    this.res = parseInt(this.num1) + parseInt(this.num2)
+		    this.words = this.text.split(' ')
 	  }
     },
     computed:{
