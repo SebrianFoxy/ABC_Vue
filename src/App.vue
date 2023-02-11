@@ -1,7 +1,8 @@
 <template>
 	<div>
-    <p :class="{active: isValid, error: isDisabled}">text</p>
-    <button @click="setDone">{{ styles.done ? "show" : "hide"}}</button>
+    <p :style="{color: 'green', 'font-weight': 'bold', background: 'yellow'}">
+		  text
+	  </p>
 	</div>
 </template>
 
