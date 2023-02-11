@@ -1,8 +1,10 @@
 <template>
 	<div>
-  <ul v-for="product in products" :key="product.id">
-		{{ product.name }}
-	</ul>
+  <p v-for="elem in arr">
+		{{ elem }}
+	</p>
+	<button @click="add">add</button>
+  <button @click="del">delete</button>
 	</div>
 </template>
 
@@ -10,24 +12,18 @@
   export default{
     data(){
       return{
-        products: [
-			{
-				id: 1,
-				name: 'product1',
-			},
-			{
-				id: 2,
-				name: 'product2',
-			},
-			{
-				id: 3,
-				name: 'product3',
-			},
-		]
+        arr: ["a"],
+        a:"",
       }
     },
     methods: {
-      
+      add: function(){
+        this.a = prompt("Введите то, что хотите добавить")
+        this.arr.push(this.a)
+      },
+      del: function(){
+        this.arr.pop()
+      }
     },
     computed:{
       
