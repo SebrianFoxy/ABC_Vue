@@ -1,6 +1,6 @@
 <template>
 	<div>
-    <p :class="{active: true, valid: false}">text</p>
+    <p :class="{active: isValid, error: isDisabled}">text</p>
     <button @click="setDone">{{ styles.done ? "show" : "hide"}}</button>
 	</div>
 </template>
@@ -9,9 +9,8 @@
   export default{
     data(){
       return{
-      styles: {
-			  done: false,
-		},
+        isValid: true,
+		    isDisabled: true,
       }
     },
     methods: {
