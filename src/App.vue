@@ -1,12 +1,10 @@
 <template>
 	<div>
-    <p>Где живешь?</p>
-  <select v-model="selected">
-		<option>В Рассия</option>
-		<option>Где-то</option>
-		<option>На планете Земля</option>
+    <select v-model="selected">
+		<option v-for="option in options">{{ option }}</option>
 	</select>
-    <p>{{ selected }}</p>
+	
+	<p>{{ selected }}</p>
   </div>
 </template>
 
@@ -14,7 +12,8 @@
   export default{
     data(){
       return{
-        selected: 'value1',
+        selected: 'Понедельник',
+		    options: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
       }
     },
     methods: {
