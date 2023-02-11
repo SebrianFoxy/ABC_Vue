@@ -1,15 +1,9 @@
 <template>
 	<div>
-    <p>Твои любимые языки:</p>
-	  <p>English <input type="checkbox" v-model="arr" value="English"></p>
-	  <p>Russian <input type="checkbox" v-model="arr" value="Russian"></p>
-	  <p>Japan <input type="checkbox" v-model="arr" value="Japan"></p>
-    <ul>
-      <li v-for="word in arr">
-        {{word}}
-      </li>
-    </ul>
-    
+    <input name="radio" type="radio" v-model="choice" value="v1">
+	  <input name="radio" type="radio" v-model="choice" value="v2">
+	  <input name="radio" type="radio" v-model="choice" value="v3">
+    you choosed: {{ choice }}    
   </div>
 </template>
 
@@ -17,8 +11,7 @@
   export default{
     data(){
       return{
-        arr: [],
-        text: '',
+        choice: '',
       }
     },
     methods: {
