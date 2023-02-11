@@ -1,12 +1,8 @@
 <template>
 	<div>
-	  <textarea v-model="text"></textarea>
-    <button @click='calc'>click!</button>
-    <ul>
-      <li v-for="word in words" :key="word">
-        {{ word }}
-      </li>
-    </ul>
+	  	<input type="checkbox" v-model="checked">
+	    <p>{{ checked ? 'yes' : 'no' }}</p>
+      <p v-if='checked == true'> Yes yes yes </p>
   </div>
 </template>
 
@@ -14,8 +10,7 @@
   export default{
     data(){
       return{
-        text: '',
-        words: [],
+        checked: 'true',
       }
     },
     methods: {
