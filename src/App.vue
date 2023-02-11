@@ -1,6 +1,6 @@
 <template>
 	<div>
-    <p>Hello</p>
+    <p :class="str">text</p>
 	</div>
 </template>
 
@@ -8,18 +8,11 @@
   export default{
     data(){
       return{
-        arr: ["a"],
-        a:"",
+        str: 'active valid',
       }
     },
     methods: {
-      add: function(){
-        this.a = prompt("Введите то, что хотите добавить")
-        this.arr.push(this.a)
-      },
-      del: function(){
-        this.arr.pop()
-      }
+      
     },
     computed:{
       
@@ -28,8 +21,6 @@
 </script>
 
 <style> 
-  p{
-    color:red;
-  }
+  
 </style>
 
