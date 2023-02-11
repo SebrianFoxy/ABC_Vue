@@ -1,9 +1,12 @@
 <template>
 	<div>
-    <input name="radio" type="radio" v-model="choice" value="v1">
-	  <input name="radio" type="radio" v-model="choice" value="v2">
-	  <input name="radio" type="radio" v-model="choice" value="v3">
-    you choosed: {{ choice }}    
+    <p>Где живешь?</p>
+  <select v-model="selected">
+		<option>В Рассия</option>
+		<option>Где-то</option>
+		<option>На планете Земля</option>
+	</select>
+    <p>{{ selected }}</p>
   </div>
 </template>
 
@@ -11,7 +14,7 @@
   export default{
     data(){
       return{
-        choice: '',
+        selected: 'value1',
       }
     },
     methods: {
