@@ -1,7 +1,9 @@
 <template>
 	<div>
-    <input v-model="message">
-	  <p>{{ message*message }}</p>
+	  <input v-model="num1">
+    <input v-model="num2">
+	  <button v-on:click="calc">work</button>
+    <p>{{ res }}</p>
 	</div>
 </template>
 
@@ -9,13 +11,15 @@
   export default{
     data(){
       return{
-        message: 'Hello',
+        num1: 0,
+        num2: 0,
+		    res: 0,
       }
     },
     methods: {
-      setDone: function(){
-        this.styles.done = !this.styles.done
-      }
+      calc: function() {
+		    this.res = parseInt(this.num1) + parseInt(this.num2)
+	  }
     },
     computed:{
       
