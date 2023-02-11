@@ -1,8 +1,7 @@
 <template>
 	<div>
-    <p :style="{color: 'green', 'font-weight': 'bold', background: 'yellow'}">
-		  text
-	  </p>
+    <input v-model="message">
+	  <p>{{ message*message }}</p>
 	</div>
 </template>
 
@@ -10,8 +9,7 @@
   export default{
     data(){
       return{
-        isValid: true,
-		    isDisabled: true,
+        message: 'Hello',
       }
     },
     methods: {
