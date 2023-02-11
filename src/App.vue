@@ -1,8 +1,8 @@
 <template>
 	<div>
-    <template v-for="elem in arr">
-		  <p> {{ elem }} </p>
-		  <hr>
+    <template v-for="user in users">
+		  <p> {{ user.name }} </p>
+		  <p> {{ user.surn }} </p>
 	  </template>
 	</div>
 </template>
@@ -11,7 +11,20 @@
   export default{
     data(){
       return{
-        arr: [0, 1, 2, 3],
+        users: [
+			{
+				name: 'name1',
+				surn: 'surn1',
+			},
+			{
+				name: 'name2',
+				surn: 'surn2',
+			},
+			{
+				name: 'name3',
+				surn: 'surn3',
+			},
+		]
       }
     },
     methods: {
