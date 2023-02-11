@@ -1,8 +1,12 @@
 <template>
 	<div>
-    <p v-for="num in 30">
-		{{ num }}
-	</p>
+    <ul>
+		<template v-for="elem in items">
+			<li v-if="elem > 0">
+				{{ elem }}
+			</li>
+		</template>
+	</ul>
 	</div>
 </template>
 
@@ -10,20 +14,7 @@
   export default{
     data(){
       return{
-        users: [
-			{
-				name: 'name1',
-				surn: 'surn1',
-			},
-			{
-				name: 'name2',
-				surn: 'surn2',
-			},
-			{
-				name: 'name3',
-				surn: 'surn3',
-			},
-		]
+        items: [1, -2, 3, -4, 5],
       }
     },
     methods: {
