@@ -1,8 +1,15 @@
 <template>
 	<div>
-	  	<input type="checkbox" v-model="checked">
-	    <p>{{ checked ? 'yes' : 'no' }}</p>
-      <p v-if='checked == true'> Yes yes yes </p>
+    <p>Твои любимые языки:</p>
+	  <p>English <input type="checkbox" v-model="arr" value="English"></p>
+	  <p>Russian <input type="checkbox" v-model="arr" value="Russian"></p>
+	  <p>Japan <input type="checkbox" v-model="arr" value="Japan"></p>
+    <ul>
+      <li v-for="word in arr">
+        {{word}}
+      </li>
+    </ul>
+    
   </div>
 </template>
 
@@ -10,12 +17,13 @@
   export default{
     data(){
       return{
-        checked: 'true',
+        arr: [],
+        text: '',
       }
     },
     methods: {
       calc: function() {
-		    this.words = this.text.split(' ')
+		    this.text = this.arr.split(' ')
 	  }
     },
     computed:{
