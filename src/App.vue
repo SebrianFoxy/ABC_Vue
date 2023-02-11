@@ -1,9 +1,8 @@
 <template>
 	<div>
-    <template v-for="user in users">
-		  <p> {{ user.name }} </p>
-		  <p> {{ user.surn }} </p>
-	  </template>
+    <p v-for="num in 30">
+		{{ num }}
+	</p>
 	</div>
 </template>
 
