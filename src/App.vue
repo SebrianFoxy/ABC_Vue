@@ -1,10 +1,6 @@
 <template>
 	<div>
-  <p v-for="elem in arr">
-		{{ elem }}
-	</p>
-	<button @click="add">add</button>
-  <button @click="del">delete</button>
+    <p>Hello</p>
 	</div>
 </template>
 
