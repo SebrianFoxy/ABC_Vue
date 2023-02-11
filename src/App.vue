@@ -1,10 +1,6 @@
 <template>
 	<div>
-    <select v-model="selected">
-		<option v-for="option in options">{{ option }}</option>
-	</select>
-	
-	<p>{{ selected }}</p>
+    <button @click="calc" v-bind:disabled="isDisabled">{{isDisabled ? "disable" : "enable"}}</button>
   </div>
 </template>
 
@@ -12,13 +8,12 @@
   export default{
     data(){
       return{
-        selected: 'Понедельник',
-		    options: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+        isDisabled: false,
       }
     },
     methods: {
       calc: function() {
-		    this.text = this.arr.split(' ')
+		    this.isDisabled = !this.isDisabled
 	  }
     },
     computed:{
