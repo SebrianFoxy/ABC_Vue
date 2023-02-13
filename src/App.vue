@@ -1,6 +1,7 @@
 <template>
 	<div>
-    <button @click="calc" v-bind:disabled="isDisabled">{{isDisabled ? "disable" : "enable"}}</button>
+    <input type='text' v-model='textInput' @keyup.enter='addtext'>
+    <p>{{ textOutput }}</p>
   </div>
 </template>
 
@@ -8,18 +9,17 @@
   export default{
     data(){
       return{
-        isDisabled: false,
+        textInput: '',
+        textOutput: '',
       }
     },
     methods: {
-      calc: function() {
-		    this.isDisabled = !this.isDisabled
+      addtext: function(){
+        this.textOutput = this.textInput;
+        this.textInput = '';
+      }
 	  }
-    },
-    computed:{
-      
-    }
-  }
+}
 </script>
 
 <style> 
