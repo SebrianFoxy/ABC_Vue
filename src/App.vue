@@ -1,7 +1,12 @@
 <template>
 	<div>
-    <input type='text' v-model='textInput' @keyup.enter='addtext'>
-    <p>{{ textOutput }}</p>
+    <ul>
+		<li v-for="(item, index) in items" :key="index">
+			{{ item }}
+		</li>
+	</ul>
+  	<input v-model="newitem">
+	  <button @click="addItem">add</button>
   </div>
 </template>
 
@@ -9,14 +14,13 @@
   export default{
     data(){
       return{
-        textInput: '',
-        textOutput: '',
+        newitem: '',
+        items: ['a', 'b', 'c'],
       }
     },
     methods: {
-      addtext: function(){
-        this.textOutput = this.textInput;
-        this.textInput = '';
+      addItem: function(){
+        this.items.push(this.newitem)
       }
 	  }
 }
