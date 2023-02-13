@@ -3,6 +3,7 @@
     <ul>
 		<li v-for="(item, index) in items" :key="index">
 			{{ item }}
+      <button @click="removeItem(index)">remove</button>
 		</li>
 	</ul>
   	<input v-model="newitem">
@@ -21,7 +22,10 @@
     methods: {
       addItem: function(){
         this.items.push(this.newitem)
-      }
+      },
+      removeItem: function(index) {
+		    this.items.splice(index, 1);
+	  }
 	  }
 }
 </script>
