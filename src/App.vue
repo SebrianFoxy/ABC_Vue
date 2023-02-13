@@ -1,5 +1,5 @@
 <template>
-	<User />
+	<User name='john' surn='smit' />
 </template>
 
 <script>
