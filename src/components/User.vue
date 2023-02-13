@@ -1,13 +1,12 @@
 <template>
     <div>
-        {{ name }}
-        {{ surn }}
+        {{ arg }}
     </div>
 </template>
 
 <script>
 export default {
-    props: ['name', 'surn'],
+    props: ['arg'],
     data() {
 		return {
 			

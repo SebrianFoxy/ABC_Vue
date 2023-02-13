@@ -1,5 +1,5 @@
 <template>
-	<User name='john' surn='smit' />
+	<User :arg="[1, 2, 3]" />
 </template>
 
 <script>
