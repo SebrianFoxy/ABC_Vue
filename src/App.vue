@@ -1,15 +1,22 @@
 <template>
-	<div>
-    <ul>
+	<ul>
 		<li v-for="user in users" :key="user.id">
-			{{ user.name }}
-      {{ user.surn }}
-      <button @click="removeItem(user.id)">remove</button>
+			<template v-if="!user.isEdit">
+				{{ user.name }}
+				{{ user.surn }}
+				<button @click="edit(user)">
+					edit
+				</button>
+			</template>
+			<template v-else>
+				<input v-model="user.name">
+				<input v-model="user.surn">
+				<button @click="save(user)">
+					save
+				</button>
+			</template>
 		</li>
 	</ul>
-  	<input v-model="newitem">
-	  <button @click="addItem">add</button>
-  </div>
 </template>
 
 <script>
@@ -21,26 +28,30 @@
 				id: 1,
 				name: 'name1',
 				surn: 'surn1',
+				isEdit: false,
 			},
 			{
 				id: 2,
 				name: 'name2',
 				surn: 'surn2',
+				isEdit: false,
 			},
 			{
 				id: 3,
 				name: 'name3',
 				surn: 'surn3',
+				isEdit: false,
 			},
 		]
       }
     },
     methods: {
-      removeItem: function(id) {
-		    this.users = this.users.filter((user) => {
-			return user.id !== id;
-		})
-	  }
+    edit(user) {
+		  user.isEdit = true;
+	  },
+	  save(user) {
+		  user.isEdit = false;
+	},
 	  }
 }
 </script>
