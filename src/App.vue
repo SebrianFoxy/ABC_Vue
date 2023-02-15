@@ -1,19 +1,25 @@
 <template>
   <div>
-    
+    <h1>Родительский компонент</h1>
+    <User @show="func" />
   </div>
 </template>
 
 <script>
+import User from './components/User.vue';
+
 export default {
-  props: ['initialCounter'],
-  data() {
-    return {
-      counter: this.initialCounter
-    }
+  components: {
+    User
+  },
+  methods: {
+	  func(arg1, arg2) {
+		  alert(arg1, arg2);
+	  }
   },
 }
 </script>
+
 
 
 <style> 
