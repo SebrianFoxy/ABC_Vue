@@ -1,22 +1,22 @@
 <template>
 <div>
-    <h2>Дочерний компонент</h2>
-    <button @click="$emit('show', 'xxx', 'yyy')">
-		click
-	</button>
+    {{ name }} {{ surn }}
+    <button @click="$emit('remove', id)">remove</button>
 </div>
 </template>
 
 <script>
 export default {
-    emits: ['show'],
-    methods: {
-	    handle() {
-		    this.$emit('show', 'xxx', 'yyy');
-	    }
-    }
-}
+    name: "User",
+    props: {
+    id: Number,
+    name: String,
+    surn: String,
+},
+    emits: ["remove"],
+};
 </script>
+
 
 
 <style>
