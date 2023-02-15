@@ -6,7 +6,10 @@
 
 <script>
 export default {
-    props: ['arg'],
+    props: {
+		name: String,
+		surn: String,
+	},
     data() {
 		return {
 			
